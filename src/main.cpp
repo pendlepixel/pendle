@@ -1,9 +1,21 @@
-//主程序开始的入口文件
+/*************************************************
+Copyright (C) 2020-2030 PENDLE. All Rights Reserved
+File name : main.cpp
+Author : pendle
+Version : V1.0
+Date : 20200914
+Description : 数据库程序入口函数.cpp文件
+Others:
+History:
+*************************************************/
+
 #include "data_def.h"
 #include "sql_parser.h"
 
 
-//整个程序的入口函数，从这里开始
+/**
+* @DESCRIPTION : 程序入口函数
+*/
 int main(int argc, char** argv)
 {
     string str = "create table if not exist `es_db_version` (\
