@@ -14,9 +14,12 @@ History:
 
 #include <iostream>
 #include <string>
+#include <list>
+#include <algorithm>
 
 using std::boolalpha;
 using std::string;
+using std::list;
 using std::cout;
 using std::endl;
 
