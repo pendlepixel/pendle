@@ -9,7 +9,7 @@ b_plus_tree.o : storage_data_def.h b_plus_tree.h b_plus_tree_index_node.h b_plus
 
 b_plus_tree_index_node.o : storage_data_def.h b_plus_tree_index_node.h
 
-b_plus_tree_leaf_node.o : storage_data_def.h b_plus_tree_leaf_node.h
+b_plus_tree_leaf_node.o : storage_data_def.h storage_data_def_inner.h  b_plus_tree_leaf_node.h
 
 .PHONY : clean
 

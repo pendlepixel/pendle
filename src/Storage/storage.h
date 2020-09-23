@@ -10,8 +10,8 @@ History:
 *************************************************/
 
 
-#ifndef SRC_STORAGE_DATA_DEF_H_
-#define SRC_STORAGE_DATA_DEF_H_
+#ifndef SRC_STORAGE_H_
+#define SRC_STORAGE_H_
 
 #include "storage_data_def.h"
 
@@ -24,4 +24,4 @@ public:
     ~Storage();
 };
 
-#endif  //SRC_STORAGE_DATA_DEF_H_
+#endif  //SRC_STORAGE_H_

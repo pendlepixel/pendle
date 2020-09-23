@@ -9,5 +9,10 @@ Others:
 History:
 *************************************************/
 
+
+#ifndef SRC_STORAGE_DATA_DEF_H_
+#define SRC_STORAGE_DATA_DEF_H_
+
 #include "../data_def.h"
 
+#endif  //SRC_STORAGE_DATA_DEF_H_

@@ -26,10 +26,16 @@ public:
     bool InsertIntoNode(const string value);
 
 private:    
+    bool NodeNumIncrease();
+    bool NodeNumDecrease();
+
     list<string> GetNode() { return node_; }
     void SetNode(list<string>& node) { node_ = node; }
+    int GetNodeNum() { return nodeNum_; }
+    void SetNodeNum(int num) { nodeNum_ = num; }
     
     list<string> node_;  //一个叶子结点
+    int nodeNum_;  //当前的叶子节点中的节点数
 };
 
 

@@ -11,14 +11,16 @@ History:
 
 
 #include "b_plus_tree_leaf_node.h"
+#include "storage_data_def_inner.h"
 
 
 /**
 * @DESCRIPTION : 叶子节点类的构造函数
 */
 BPlusLeafNode::BPlusLeafNode()
+    : nodeNum_(0)
 {
-
+    
 }
 
 
@@ -28,6 +30,41 @@ BPlusLeafNode::BPlusLeafNode()
 BPlusLeafNode::~BPlusLeafNode()
 {
 
+}
+
+
+bool BPlusLeafNode::NodeNumIncrease()
+{
+    int num = GetNodeNum();
+    num += 1;
+    SetNodeNum(num);
+
+    if (num > tree::nodeNumMax)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+    
+}
+
+
+bool BPlusLeafNode::NodeNumDecrease()
+{
+    int num = GetNodeNum();
+    num -= 1;
+    SetNodeNum(num);
+
+    if (num < tree::nodeNumMin)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
 }
 
 
@@ -41,6 +78,7 @@ bool BPlusLeafNode::InsertIntoNode(const string value)
         if (value < str)
         {
             node.insert(iter, value);
+            NodeNumIncrease();
         }
     }
 
