@@ -22,6 +22,22 @@ class BPlusIndexNode
 public:
     BPlusIndexNode();
     ~BPlusIndexNode();
+
+    bool InsertIntoNode(const string value);
+    bool IndexNodeDivide(string& divideValue, list<string>& firstDivideNode, 
+        list<string>& secondDivideNode);
+
+private:
+    bool NodeNumIncrease();
+    bool NodeNumDecrease();
+
+    list<string> GetNode() { return node_; }
+    void SetNode(list<string>& node) { node_ = node; }
+    int GetNodeNum() { return nodeNum_; }
+    void SetNodeNum(int num) { nodeNum_ = num; }
+    
+    list<string> node_;  //一个索引结点
+    int nodeNum_;  //当前的索引节点中的节点数
 };
 
 

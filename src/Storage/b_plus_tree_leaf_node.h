@@ -24,6 +24,8 @@ public:
     ~BPlusLeafNode();
 
     bool InsertIntoNode(const string value);
+    bool LeafNodeDivide(string& divideValue, list<string>& firstDivideNode, 
+        list<string>& secondDivideNode);
 
 private:    
     bool NodeNumIncrease();
