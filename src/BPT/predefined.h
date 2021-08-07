@@ -16,18 +16,20 @@ History:
 
 namespace bpt {
 
-#define BP_ORDER 20
+#define BP_ORDER 20  //b+树中的每个节点最多含有的单个节点数
+#define PATH_MAX_SIZE 512  //路径最大长度
+#define KEY_MAX_SIZE 16  //key值占用的字节数
 
 /*key/value type*/
 typedef int value_t;
 struct key_t
 {
-    char k[16];
+    char k[KEY_MAX_SIZE];
 
     key_t(const char* str = "")
     {
-        bzero(k, sizeof(k));
-        strcpy(k, str);
+        memset(k, sizeof(k), 0);
+        strncpy(k, str, sizeof(k));
     }
 
     operator bool() const 
